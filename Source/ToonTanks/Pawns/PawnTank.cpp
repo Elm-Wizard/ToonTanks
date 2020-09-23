@@ -35,7 +35,7 @@ void APawnTank::Tick(float DeltaTime)
     Rotate();
     Move();
 
-    if(PlayerControllerRef)
+    if (PlayerControllerRef)
     {
         FHitResult TraceHitResult;
         PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility, false, TraceHitResult);
