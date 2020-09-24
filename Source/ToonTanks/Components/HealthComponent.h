@@ -17,7 +17,7 @@ private:
 	UPROPERTY(EditAnywhere)
 	float DefaultHealth = 100.f;
 	float Health = 0.0f;
-
+	AActor *Owner;
 	ATankGameModeBase *GameModeRef;
 
 public:

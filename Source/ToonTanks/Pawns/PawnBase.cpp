@@ -2,8 +2,6 @@
 
 #include "PawnBase.h"
 #include "Components/CapsuleComponent.h"
-#include "Components/SceneComponent.h"
-#include "Components/StaticMeshComponent.h"
 #include "ToonTanks/Actors/ProjectileBase.h"
 
 // Sets default values
@@ -23,6 +21,11 @@ APawnBase::APawnBase()
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Projectile Spawn Point"));
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
+}
+
+void APawnBase::PawnDestroyed() 
+{
+	
 }
 
 void APawnBase::RotateTurret(FVector LookAtTarget)
